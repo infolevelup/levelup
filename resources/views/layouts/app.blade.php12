@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>@yield('title') |Level Up</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      
+      
+      
+      
+      <!-- Owl Carousel -->
+	<link rel="stylesheet" href="{{url('/')}}/public/plugins/owl/owl.carousel.css">
+	<link rel="stylesheet" href="{{url('/')}}/public/plugins/owl/owl.theme.css">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="{{url('/')}}/public/plugins/flex-slider/flexslider.css">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="{{url('/')}}/public/plugins/cd-hero/cd-hero.css">
+     
+     <!-- AOS ANIMATION-->
+	<link rel="stylesheet" href="{{url('/')}}/public/css/aos.css">
+     
+     
+<!--     	toggle tab css-->
+      <link rel="stylesheet" href="{{url('/')}}/public/css/w3.css">
+      
+      
+      
+       <link rel="stylesheet" type="text/css" href="{{url('/')}}/public/css/custom.css">
+      <link rel="stylesheet" type="text/css" href="{{url('/')}}/public/css/css/font-awesome.min.css">
+      
+      <link rel="stylesheet" type="text/css" href="{{url('/')}}/public/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{{url('/')}}/public/css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{{url('/')}}/public/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="{{url('/')}}/public/images/fevicon.html" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{{url('/')}}/public/css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="../../../netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&amp;display=swap" rel="stylesheet">
+      <!-- font awesome -->
+      <link rel="stylesheet" type="text/css" href="stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--  -->
+      <!-- owl stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&amp;display=swap&amp;subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="{{url('/')}}/public/css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="{{url('/')}}/public/css/owl.theme.default.min.html">
+      <link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
+     
+      <!-- Testimonial Sections -->
+  
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  
+  
+   </head>
+   <body>
+     <section>
+      <!-- banner bg main start -->
+      <div class="banner_bg_main">
+         <!-- header top section start -->
+         <div class="container-fluid container_fluid_padding_css">
+           	
+           	<div class="row">
+           		<div class="col-12 col-md-7 col-lg-7">
+           			<div class="header_section_top">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="custom_menu">
+                       	<p><span class="offer_header_span">Hurry Now! 15% Discount</span> on All Courses. Offer ends in <span id="demo"></span></p>
+<!--
+                        <ul>
+                           <li><a href="#">Hurry Now! 15% Discount on All Courses. Offer ends in 2d : 15Hr : 30 M</a></li>
+                           <li><a href="#">Gift Ideas</a></li>
+                           <li><a href="#">New Releases</a></li>
+                           <li><a href="#">Today's Deals</a></li>
+                           <li><a href="#">Customer Service</a></li>
+                        </ul>
+-->
+                     </div>
+                  </div>
+               </div>
+            </div>
+           		</div>
+           		<div class="col-12 col-md-5 col-lg-5">
+           			<div class="top_header_right_div">
+           				<ul>
+                          
+                           <li class="top_header_right_li_1"><a href="#">Corporate Trainings</a></li>
+                           <li class="top_header_right_li_2"><a href="#">Teach on Level Up</a></li>
+                          
+                        </ul>
+           			</div>
+           		</div>
+           	</div>
+            
+         </div>
+         <!-- header top section start -->
+         <!-- logo section start -->
+<!--
+         <div class="logo_section">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="logo"><a href="index-2.html"><img src="{{url('/')}}/public/images/logo.png"></a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+-->
+         <!-- logo section end -->
+         <!-- header section start -->
+         <div class="header_section">
+            <div class="container">
+               <div class="containt_main">
+                 <div class="logo_header_div">
+                 	<a href="{{url('/')}}"><img src="{{url('/')}}/public/images/logo.png"></a>
+                 </div>
+                 
+                  <div id="mySidenav" class="sidenav">
+                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                     <a href="index-2.html">Home</a>
+                     <a href="fashion.html">Fashion</a>
+                     <a href="electronic.html">Electronic</a>
+                     <a href="jewellery.html">Jewellery</a>
+                  </div>
+                  <span class="toggle_icon" onclick="openNav()"><img src="{{url('/')}}/public/images/toggle-icon.png"></span>
+                  <div class="dropdown">
+                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{url('/')}}/public/images/Categories_icon.png">Categories
+                     </button>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                       <?php 
+                       $course=App\Category::where('status',1)->get();
+                       ?>
+                       	<div class="row">
+                       	    
+                       		<div class="col-12 col-md-4 col-lg-4">
+                       		@foreach($course as $course)
+                       			<a class="dropdown-item" href="{{url('/')}}/category/{{$course->slug}}">{{$course->name}}</a>
+                       		@endforeach
+                       		</div>
+                       		
+                       	<!--	<div class="col-12 col-md-4 col-lg-4">
+                       			 <a class="dropdown-item" href="#">Action</a>
+                       			 <a class="dropdown-item" href="#">Another action</a>
+                       		</div>
+                       		
+                       		<div class="col-12 col-md-4 col-lg-4">
+                       			<a class="dropdown-item" href="#">Action</a>
+                       			 <a class="dropdown-item" href="#">Another action</a>
+                       		</div>-->
+                       	</div>
+                       	
+<!--
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+-->
+                     </div>
+                  </div>
+                  <div class="main">
+                     <!-- Another variation with a button -->
+                     <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter a course, category or keyword">
+                        <div class="input-group-append">
+                           <button class="btn btn-secondary header_search_btn" type="button" >
+                           <i class="fa fa-search"></i>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="header_box">
+                  
+                  
+                  
+<!--
+                     <div class="lang_box ">
+                        <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
+                        <img src="{{url('/')}}/public/images/flag-uk.png" alt="flag" class="mr-2 " title="United Kingdom"> English <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu ">
+                           <a href="#" class="dropdown-item">
+                           <img src="{{url('/')}}/public/images/flag-france.png" class="mr-2" alt="flag">
+                           French
+                           </a>
+                        </div>
+                     </div>
+-->
+                     <div class="login_menu">
+                        <ul>
+                           <li class="header_li_right_border"><a href="{{url('/')}}/labs">
+                              
+                              <span class="padding_10">Labs</span></a>
+                           </li>
+                           
+                                                         @if(empty(Auth::check()))
+
+                           <li><a href="{{url('/')}}/login">
+                              
+                              <span class="padding_10">Login</span></a>
+                           </li>
+                            <li class="header_right_sign_up_btn"><a href="{{url('/')}}/register">
+                              
+                              <span class="padding_10">Sign Up</span></a>
+                           </li>
+                              <li class="header_right_cart_btn">
+                                  	<a href="{{url('/')}}/login">
+                                           	<i class="fa fa-shopping-cart"></i>
+                                           	</a>
+                                           	</li>
+                           @else
+                              <li> 
+                                      <a href="{{'/logout'}}" onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();"><span class="padding_10">Logout</span></a>
+                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>  
+                            </li>
+                          
+                           <li class="header_right_cart_btn">
+                                          <?php 
+                                          $cart_counter = \App\Cart::where('session_id',session()->getId())->orwhere('user_id',Auth::user()->id)->count('id'); 
+                                             ?>
+                                            
+                                            	<a href="{{url('/')}}/cart">
+                                           	<i class="fa fa-shopping-cart"></i>
+                                          	@if($cart_counter>0)
+                                           	                  	<span class="badge rounded-pill badge-notification bg-danger">{{$cart_counter}}
+                
+                                                                 </span>
+                                           	@else
+                            
+                                          	@endif
+                                             </a>
+                      
+                           </li>
+                            @endif
+                           
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- header section end -->
+         
+   
+      @stack('before-styles')
+            @stack('after-styles')
+
+    
+   
+     @yield('content')
+     
+ 
+
+
+<a id="button"></a>    
+              
+                            
+     
+    <section class="footer_main_section">
+	<div class="container">
+		<div class="footer_main_div">
+			
+			<div class="row">
+				<div class="col-12">
+					<div class="footer_logo_div">
+							<a href="#"><img src="{{url('/')}}/public/images/levelup-footer-logo.png"></a>
+						</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-md-3 col-lg-3">
+					<div class="footer_column_1">
+						
+						
+						
+						
+						<div class="footer_phone_div">
+							<a href="tel:"><i class="fa fa-phone"></i>+91 99 9999 9999</a>
+						</div>
+						
+						<div class="footer_email_div">
+							<a href="mailto:"><i class="fa fa-envelope"></i>contact@levelup.com</a>
+						</div>
+						
+						<div class="footer_address_div">
+							<a href=""><i class="fa fa-map-marker"></i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </a>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-12 col-md-3 col-lg-3">
+					<div class="footer_column_2">
+						<div class="footer_quicklinks">
+							<p>Quick Links</p>
+							<ul>
+								<li><a href="#">Certified Coures</a></li>
+								<li><a href="#">Graduation Courses</a></li>
+								<li><a href="#">Post Graduation Courses</a></li>
+								<li><a href="#">University Programs</a></li>
+								
+								
+								
+							</ul>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="col-12 col-md-3 col-lg-3">
+					<div class="footer_column_2">
+						<div class="footer_morelinks">
+							
+							<ul>i
+								<li><a href="#">Categories</a></li>
+								<li><a href="{{url('/')}}/labs">Labs</a></li>
+								<li><a href="#">Corporate Trainings</a></li>
+								<li><a href="#">Teach on Level Up</a></li>
+								
+								
+								
+							</ul>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				<div class="col-12 col-md-3 col-lg-3">
+					<div class="footer_column_3">
+					
+					
+						
+						<div class="footer_social_icons">
+							<p>Connect via social media to know more about our facilities and services</p>
+						</div>
+						
+						<div class="footer_social_icons_css">
+							<a title="Facebook" href="#" target="_blank">
+								<span class="social-icon"><i class="fa fa-facebook"></i></span>
+							</a>
+							<a title="Twitter" href="#" target="_blank">
+								<span class="social-icon"><i class="fa fa-twitter"></i></span>
+							</a>
+							<a title="Instagram" href="#"   target="_blank">
+								<span class="social-icon"><i class="fa fa-instagram"></i></span>
+							</a>
+							<a title="Linkdin" href="#" target="_blank">
+								<span class="social-icon"><i class="fa fa-linkedin"></i></span>
+							</a>
+							<a title="Linkdin" href="#" target="_blank">
+								<span class="social-icon"><i class="fa fa-youtube"></i></span>
+							</a>
+				
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</div>
+</section>
+
+<section class="bottom_footer_section">
+	<div class="container">
+		<div class="footer_bottom_main_div">
+			<div class="row">
+				<div class="col-12 col-md-7 col-lg-7">
+					<div class="brew_copyright-info hover_custom_color_2">Copyright 2020 ©
+						<span> <a href="#" class="custom_yellow_copyright_link" > LevelUp Pvt Ltd</a></span>&nbsp; &nbsp;
+						<span class="bottom_footer_border"><a href="{{url('/')}}/general_pages">Privacy Policy</a></span>&nbsp; &nbsp;
+						<span class="bottom_footer_border"><a href="{{url('/')}}/general_pages">Terms & Conditions</a></span>
+					</div>
+				</div>
+				<div class="col-12 col-md-5 col-lg-5">
+					<div class="telco_credits">
+						<a href="http://telcopl.com/" target="_blank">Powered by Telco Communications India Pvt Ltd</a> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>        
+ 
+                       
+                                                                   
+                          
+                                  
+               
+                  
+                     
+                           
+      
+      
+
+      
+      
+    
+      <!-- Javascript files-->
+      <script src="{{url('/')}}/public/js/jquery.min.js"></script>
+      <script src="{{url('/')}}/public/js/popper.min.js"></script>
+      <script src="{{url('/')}}/public/js/bootstrap.bundle.min.js"></script>
+      <script src="{{url('/')}}/public/js/jquery-3.0.0.min.js"></script>
+      <script src="{{url('/')}}/public/js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="{{url('/')}}/public/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="{{url('/')}}/public/js/custom.js"></script>
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "250px";
+         }
+         
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+         }
+      </script>
+      
+      
+      
+      
+      
+<!--      header countdown-->
+      
+      <script>
+// Set the date we're counting down to
+var countDownDate = new Date("March 31, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d : " + hours + "hr : "
+  + minutes + "m : " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+      
+      
+ 
+ <!--       countdown 1-->
+      
+      <script>
+// Set the date we're counting down to
+var countDownDate = new Date("March 31, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo1").innerHTML = days + "d : " + hours + "hr : "
+  + minutes + "m : " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo1").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+          
+ <!--       countdown 2-->
+      
+      <script>
+// Set the date we're counting down to
+var countDownDate = new Date("March 31, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo2").innerHTML = days + "d : " + hours + "hr : "
+  + minutes + "m : " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo2").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>         
+          
+    
+           
+                  
+                         
+                                       
+      
+      
+      
+  
+  
+<!--  toggle tab script-->
+  
+   <script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>      
+                 
+ <!--       countdown 3-->
+      
+      <script>
+// Set the date we're counting down to
+var countDownDate = new Date("April 30, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo3").innerHTML = days + "d : " + hours + "hr : "
+  + minutes + "m : " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo3").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script> 
+             
+                     
+                             
+                                     
+                                             
+  <!--       countdown 4-->
+      
+      <script>
+// Set the date we're counting down to
+var countDownDate = new Date("April 30, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo4").innerHTML = days + "d : " + hours + "hr : "
+  + minutes + "m : " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo4").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+
+<!--       countdown 5-->
+      
+      <script>
+// Set the date we're counting down to
+var countDownDate = new Date("April 30, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo5").innerHTML = days + "d : " + hours + "hr : "
+  + minutes + "m : " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo5").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script> 
+   
+       
+    <!--       countdown 6-->
+      
+      <script>
+// Set the date we're counting down to
+var countDownDate = new Date("April 30, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo6").innerHTML = days + "d : " + hours + "hr : "
+  + minutes + "m : " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo6").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>                                                                                                                                                                                                                                <!--       countdown 7-->
+      
+      <script>
+// Set the date we're counting down to
+var countDownDate = new Date("April 30, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo7").innerHTML = days + "d : " + hours + "hr : "
+  + minutes + "m : " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo7").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>        
+    <!--       countdown 8-->
+      
+      <script>
+// Set the date we're counting down to
+var countDownDate = new Date("April 30, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo8").innerHTML = days + "d : " + hours + "hr : "
+  + minutes + "m : " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo8").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>                                                                                                                     
+                                                                                                                       
+                                                                     
+              
+        <script>
+	   
+	   	$('.Count').each(function () {
+  var $this = $(this);
+  jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+    duration: 10000,
+    easing: 'swing',
+    step: function () {
+      $this.text(Math.ceil(this.Counter));
+    }
+  });
+});
+	   </script>              
+     
+     
+     
+     
+     
+     
+     
+     
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     
+     <script>
+	
+	$(document).ready(function(){
+
+$('.stories_items').slick({
+dots: true,
+infinite: true,
+speed: 800,
+autoplay: true,
+autoplaySpeed: 2000,
+slidesToShow: 3,
+slidesToScroll: 3,
+responsive: [
+{
+breakpoint: 1024,
+settings: {
+slidesToShow: 3,
+slidesToScroll: 3,
+infinite: true,
+dots: true
+}
+},
+{
+breakpoint: 600,
+settings: {
+slidesToShow: 1,
+slidesToScroll: 1
+}
+},
+{
+breakpoint: 480,
+settings: {
+slidesToShow: 1,
+slidesToScroll: 1
+}
+}
+
+]
+});
+});
+	</script>
+     
+     
+     
+     
+     <script>
+	
+	$(document).ready(function(){
+
+$('.course_items').slick({
+dots: true,
+infinite: true,
+speed: 800,
+autoplay: true,
+autoplaySpeed: 2000,
+slidesToShow: 4,
+slidesToScroll: 4,
+responsive: [
+{
+breakpoint: 1024,
+settings: {
+slidesToShow: 4,
+slidesToScroll: 4,
+infinite: true,
+dots: true
+}
+},
+{
+breakpoint: 600,
+settings: {
+slidesToShow: 2,
+slidesToScroll: 2
+}
+},
+{
+breakpoint: 480,
+settings: {
+slidesToShow: 1,
+slidesToScroll: 1
+}
+}
+
+]
+});
+});
+	</script>
+	
+	
+	<script>
+	
+	$(document).ready(function(){
+
+$('.section_6_items').slick({
+dots: true,
+infinite: true,
+speed: 800,
+autoplay: true,
+autoplaySpeed: 2000,
+slidesToShow: 1,
+slidesToScroll: 1,
+responsive: [
+{
+breakpoint: 1024,
+settings: {
+slidesToShow: 1,
+slidesToScroll: 1,
+infinite: true,
+dots: true
+}
+},
+{
+breakpoint: 600,
+settings: {
+slidesToShow: 1,
+slidesToScroll: 1
+}
+},
+{
+breakpoint: 480,
+settings: {
+slidesToShow: 1,
+slidesToScroll: 1
+}
+}
+
+]
+});
+});
+	</script>
+     
+     
+     
+     
+     <!-- AOS ANIMATION -->
+	<script src="{{url('/')}}/public/js/popper.min.js"></script>
+	<!--<script src="{{url('/')}}/public/js/active.js"></script>-->
+	<script src="{{url('/')}}/public/js/aos.js"></script>
+<!--	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>-->
+	<script>
+  		AOS.init();
+	</script>
+
+      @stack('after-scripts')
+</body>
+</html>

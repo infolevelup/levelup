@@ -1,0 +1,1492 @@
+
+       @extends('layouts.app')
+
+@section('content')  
+
+         <section id="home" class="slider_landing_section">
+	<div id="main-slide" class="carousel slide" data-ride="carousel">
+		<div class="overlay"></div>
+		<ol class="carousel-indicators">
+		
+			  <?php $i=1; ?>
+		    @foreach($banners as $banner)
+		    
+			<li data-target="#main-slide" data-slide-to="<?php $i?>" class="<?php if($i==1){echo 'active';}?>"></li>
+			<?php  $i++;?>
+		@endforeach	
+			<!--<li data-target="#main-slide" data-slide-to="2"></li>-->
+		</ol>
+		<div class="carousel-inner">
+				   <?php $i=1; ?>
+		    @foreach($banners as $banner)
+		    
+			<div class="carousel-item<?php if($i==1){ echo' active'; }?>">
+				<img class="img-fluid" src="{{url('/')}}/public/uploads/images/{{$banner->image}}" alt="slider">
+				<div class="slider-content">
+					<div class="col-md-12 ">
+						<h2 class="animated2">
+							{{$banner->name}}
+						</h2>
+						<h3 class="animated3">
+						</h3>
+						
+						<div class="row">
+							<div class="col-12 col-md-3 col-lg-3"></div>
+							<div class="col-12 col-md-6 col-lg-6">
+								<h4 class="animated4">
+						{{$banner->content}}
+						</h4>
+
+							</div>
+							<div class="col-12 col-md-3 col-lg-3"></div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+				<?php $i++; ?>
+			
+			@endforeach
+			
+			
+		</div>
+		<!--<a class="left carousel-control carousel-control-prev" href="#main-slide" data-slide="prev">
+			<span><i class="fa fa-angle-left"></i></span>
+		</a>-->
+		<!--<a class="right carousel-control carousel-control-next" href="#main-slide" data-slide="next">
+			<span><i class="fa fa-angle-right"></i></span>
+		</a>-->
+	</div>
+</section>
+<!--/ Slider end -->
+         
+    
+         
+        </div>  
+        
+        </section>
+         
+         <!-- banner section start -->
+         
+         <!-- banner section end -->
+     
+      
+      
+      
+<section class="after_banner_section" >
+	<div class="container">
+	
+		<div class="after_banner_section_spacing_div">
+			
+		
+		<div class="row">
+		
+			<div class="col-12 col-md-2 col-lg-2"></div>
+			<div class="col-12 col-md-2 col-lg-2">
+				<div class="four_section_div" data-aos="fade-right" data-aos-delay="600">
+				
+					<div class="four_section_image_div">
+						<img src="{{url('/')}}/public/images/banner_icons1.png">
+					</div>
+					
+					<div class="four_section_description">
+						<p>Become Industry Expert in AWS</p>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="col-12 col-md-2 col-lg-2">
+				<div class="four_section_div" data-aos="fade-right" data-aos-delay="700">
+				
+					<div class="four_section_image_div">
+						<img src="{{url('/')}}/public/images/banner_icons2.png">
+					</div>
+					
+					<div class="four_section_description">
+						<p>Become Industry Expert in Cloud</p>
+					</div>
+					
+				</div>
+			</div>
+			
+			
+			<div class="col-12 col-md-2 col-lg-2">
+				<div class="four_section_div" data-aos="fade-right" data-aos-delay="800">
+				
+					<div class="four_section_image_div">
+						<img src="{{url('/')}}/public/images/banner_icons3.png">
+					</div>
+					
+					<div class="four_section_description">
+						<p>Become Industry Expert in DevOps</p>
+					</div>
+					
+				</div>
+			</div>
+			
+			
+			<div class="col-12 col-md-2 col-lg-2">
+				<div class="four_section_div" data-aos="fade-right" data-aos-delay="900">
+				
+					<div class="four_section_image_div">
+						<img src="{{url('/')}}/public/images/banner_icons4.png">
+					</div>
+					
+					<div class="four_section_description">
+						<p>Become Industry Expert in Big Data</p>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="col-12 col-md-2 col-lg-2">
+			</div>
+			
+			
+			
+		</div>
+		
+		</div>
+	</div>
+</section>      
+     
+     
+ <section class="certificate_section">
+ 	<div class="container">
+ 	
+ 		<div class="certificate_main_heading_div" data-aos="fade-left" data-aos-delay="600">
+ 			<p> LevelUp stands by you all the way to ensure that you achieve your learning goals. We are “Committed to Excellence”</p>
+ 		</div>
+ 		
+ 		<div class="certificate_main_heading_div_2">
+ 			<div class="row" data-aos="fade-right" data-aos-delay="600">
+ 				<div class="col-12 col-md-4 col-lg-4">
+ 					<div class="certificate_main_heading_div_2_inner">
+ 						<div class="row">
+ 							<div class="col-4 col-md-4 col-lg-4">
+ 								<div class="certificate_main_heading_div_2_inner_iamges">
+ 									<img src="{{url('/')}}/public/images/icon_azure_104.png">
+ 								</div>
+ 							</div>
+ 							<div class="col-8 col-md-8 col-lg-8">
+ 								<div class="certificate_main_heading_div_2_inner_heading_1">
+ 									<p>Certification in</p>
+ 								</div>
+ 								
+ 								<div class="certificate_main_heading_div_2_inner_heading_2">
+ 									<p>Azure 104</p>
+ 								</div>
+ 								
+ 								<div class="certificate_main_heading_div_2_inner_heading_3">
+ 									<p>>> Know More</p>
+ 								</div>
+ 								
+ 							</div>
+ 						</div>
+ 					</div>
+ 				</div>
+ 				<div class="col-12 col-md-4 col-lg-4">
+ 					<div class="certificate_main_heading_div_2_inner">
+ 						<div class="row">
+ 							<div class="col-4 col-md-4 col-lg-4">
+ 								<div class="certificate_main_heading_div_2_inner_iamges">
+ 									<img src="{{url('/')}}/public/images/icon_azure_204.png">
+ 								</div>
+ 							</div>
+ 							<div class="col-8 col-md-8 col-lg-8">
+ 								<div class="certificate_main_heading_div_2_inner_heading_1">
+ 									<p>Certification in</p>
+ 								</div>
+ 								
+ 								<div class="certificate_main_heading_div_2_inner_heading_2">
+ 									<p>Azure 204</p>
+ 								</div>
+ 								
+ 								<div class="certificate_main_heading_div_2_inner_heading_3">
+ 									<p>>> Know More</p>
+ 								</div>
+ 								
+ 							</div>
+ 						</div>
+ 					</div>
+ 				</div>
+ 				<div class="col-12 col-md-4 col-lg-4">
+ 					<div class="certificate_main_heading_div_2_inner">
+ 						<div class="row">
+ 							<div class="col-4 col-md-4 col-lg-4">
+ 								<div class="certificate_main_heading_div_2_inner_iamges">
+ 									<img src="{{url('/')}}/public/images/icon_azure_400.png">
+ 								</div>
+ 							</div>
+ 							<div class="col-8 col-md-8 col-lg-8">
+ 								<div class="certificate_main_heading_div_2_inner_heading_1">
+ 									<p>Certification in</p>
+ 								</div>
+ 								
+ 								<div class="certificate_main_heading_div_2_inner_heading_2">
+ 									<p>Azure 400</p>
+ 								</div>
+ 								
+ 								<div class="certificate_main_heading_div_2_inner_heading_3">
+ 									<p>>> Know More</p>
+ 								</div>
+ 								
+ 							</div>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 			
+ 			
+ 			<div class="row row_padding_certificate" data-aos="fade-left" data-aos-delay="700">
+ 				<div class="col-12 col-md-4 col-lg-4">
+ 					<div class="certificate_main_heading_div_2_inner">
+ 						<div class="row">
+ 							<div class="col-4 col-md-4 col-lg-4">
+ 								<div class="certificate_main_heading_div_2_inner_iamges">
+ 									<img src="{{url('/')}}/public/images/icon_database.png">
+ 								</div>
+ 							</div>
+ 							<div class="col-8 col-md-8 col-lg-8">
+ 								<div class="certificate_main_heading_div_2_inner_heading_1">
+ 									<p>Certification in</p>
+ 								</div>
+ 								
+ 								<div class="certificate_main_heading_div_2_inner_heading_2">
+ 									<p>Cloud Database</p>
+ 								</div>
+ 								
+ 								<div class="certificate_main_heading_div_2_inner_heading_3">
+ 									<p>>> Know More</p>
+ 								</div>
+ 								
+ 							</div>
+ 						</div>
+ 					</div>
+ 				</div>
+ 				<div class="col-12 col-md-4 col-lg-4">
+ 					<div class="certificate_main_heading_div_2_inner">
+ 						<div class="row">
+ 							<div class="col-4 col-md-4 col-lg-4">
+ 								<div class="certificate_main_heading_div_2_inner_iamges">
+ 									<img src="{{url('/')}}/public/images/icon_google.png">
+ 								</div>
+ 							</div>
+ 							<div class="col-8 col-md-8 col-lg-8">
+ 								<div class="certificate_main_heading_div_2_inner_heading_1">
+ 									<p>Certification in</p>
+ 								</div>
+ 								
+ 								<div class="certificate_main_heading_div_2_inner_heading_2">
+ 									<p>Google Cloud</p>
+ 								</div>
+ 								
+ 								<div class="certificate_main_heading_div_2_inner_heading_3">
+ 									<p>>> Know More</p>
+ 								</div>
+ 								
+ 							</div>
+ 						</div>
+ 					</div>
+ 				</div>
+ 				<div class="col-12 col-md-4 col-lg-4">
+ 					<div class="certificate_main_heading_div_2_inner">
+ 						<div class="row">
+ 							<div class="col-4 col-md-4 col-lg-4">
+ 								<div class="certificate_main_heading_div_2_inner_iamges">
+ 									<img src="{{url('/')}}/public/images/icon_azure_new.png">
+ 								</div>
+ 							</div>
+ 							<div class="col-8 col-md-8 col-lg-8">
+ 								<div class="certificate_main_heading_div_2_inner_heading_1">
+ 									<p>Migration to</p>
+ 								</div>
+ 								
+ 								<div class="certificate_main_heading_div_2_inner_heading_2">
+ 									<p>Azure</p>
+ 								</div>
+ 								
+ 								<div class="certificate_main_heading_div_2_inner_heading_3">
+ 									<p>>> Know More</p>
+ 								</div>
+ 								
+ 							</div>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 			
+ 			
+ 		</div>
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 	</div>
+ </section>
+      
+   
+      
+  <section class="section_3" data-aos="fade-right" data-aos-delay="600">
+  	<div class="container">
+  		<div class="section_3_heading_1">
+  			<p>Get the Edge you’ve always wanted</p>
+  		</div>
+  		
+  		<div class="section_3_heading_2">
+  			<p>Level Up is an online learning destination and  our mission is to deliver high-quality educational content.</p>
+  		</div>
+  		<div class="row section_3_underlines">
+  			<div class="col-12 col-md-3 col-lg-3">
+  				<div class="section_3_row_div">
+  					<div class="section_3_image">
+  						<img src="{{url('/')}}/public/images/icons_1.png">
+  					</div>
+  					<div class="section_3_headings">
+  						<p>Learn at your pace</p>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="col-12 col-md-3 col-lg-3">
+  				<div class="section_3_row_div">
+  					<div class="section_3_image">
+  						<img src="{{url('/')}}/public/images/icons_2.png">
+  					</div>
+  					<div class="section_3_headings">
+  						<p>Real Time Doubt Resolution</p>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="col-12 col-md-3 col-lg-3">
+  				<div class="section_3_row_div">
+  					<div class="section_3_image">
+  						<img src="{{url('/')}}/public/images/icons_3.png">
+  					</div>
+  					<div class="section_3_headings">
+  						<p>Track Your Career Growth</p>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="col-12 col-md-3 col-lg-3">
+  				<div class="section_3_row_div">
+  					<div class="section_3_image">
+  						<img src="{{url('/')}}/public/images/icons_4.png">
+  					</div>
+  					<div class="section_3_headings">
+  						<p>Certification</p>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </section>   
+      
+  
+     
+  <section class="section_4">
+  	<div class="container">
+  		<div class="section_4_main_heading_1" data-aos="fade-top" data-aos-delay="600">
+  			<p>Popular <span>Courses</span></p>
+  		</div>
+  		
+  		<div class="section_4_main_heading_2" data-aos="fade-top" data-aos-delay="700">
+  			<p>Make your way down a Path and build specific skills that will help you land an amazing job. </p>
+  		</div>
+  	
+  	
+  	
+  		<div class="toggle_tab_div">
+  			<div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,'all')">All</button>
+     <?php 
+    $categor = App\Category::orderBy('id','DESC')->limit(5)->get();
+    ?>
+    @foreach($categor as $categor)
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'{{$categor->name}}')">{{$categor->name}}</button>
+    
+    @endforeach
+  <!--  <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'cloud_computing')">Cloud Computing</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'devops')">DevOps</button>
+    
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'datascience')">DataScience</button>-->
+    
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'bigdata')">BigData</button>
+  </div>
+  
+  <div id="all" class="w3-container w3-border city">
+    
+    
+    <div class="row">
+    	<div class="col-12">
+    		<div class="course_slider_main_div">
+    					<div class="course_slider_main_div_inner">
+					<div class="course_items">
+					    					    <?php $i=1;?>
+					    					     @foreach($course as $course)
+
+						<div class="card">
+							<div class="blog_card-body">
+								<div class="section_4_all_main_div">
+    		 
+									<div class="clip_path_1"></div>
+									<div class="section_4_image_div{{$i}}">
+									
+										<div class="section_4_image_div_inner">
+													<img src="{{url('/')}}/public/uploads/course_images/{{$course->course_image}}">
+										</div>
+											
+										<div class="section_4_price_div_inner">
+											<p>₹{{$course->price}}</p>
+										</div>
+												
+										
+									</div>
+
+									<div class="section_4_heading_1">
+										<p>Beginer</p>
+									</div>
+									<div class="section_4_heading_2">
+													<p>{{$course->title}}</p>		
+									</div>
+
+									<div class="section_4_star_rating">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="star_text">3.2</span>
+									</div>
+
+									<div class="section_4_heading_4">
+										<p><span class="fa fa-book"></span>15 Sessions | 22 Hrs</p>
+									</div>
+				
+								</div>
+							</div>
+						</div>
+						<?php $i++;?>
+											  @endforeach 
+
+					<!--	<div class="card">
+							<div class="blog_card-body">
+								<div class="section_4_all_main_div">
+    		 
+									<div class="clip_path_1"></div>
+									<div class="section_4_image_div2">
+									
+										<div class="section_4_image_div_inner">
+											<img src="{{url('/')}}/public/images/01.png">
+										</div>
+											
+										<div class="section_4_price_div_inner">
+											<p>₹12,000</p>
+										</div>
+												
+										
+									</div>
+
+									<div class="section_4_heading_1_color_2">
+										<p>Intermediate</p>
+									</div>
+									<div class="section_4_heading_2">
+										<p>Certification in DevOps</p>
+									</div>
+
+									<div class="section_4_star_rating">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="star_text">3.2</span>
+									</div>
+
+									<div class="section_4_heading_4">
+										<p><span class="fa fa-book"></span>15 Sessions | 22 Hrs</p>
+									</div>
+				
+								</div>
+							</div>
+						</div>
+						
+						
+						
+						<div class="card">
+							<div class="blog_card-body">
+								<div class="section_4_all_main_div">
+    		 
+									<div class="clip_path_1"></div>
+									<div class="section_4_image_div3">
+									
+										<div class="section_4_image_div_inner">
+											<img src="{{url('/')}}/public/images/01.png">
+										</div>
+											
+										<div class="section_4_price_div_inner">
+											<p>₹12,000</p>
+										</div>
+												
+										
+									</div>
+
+									<div class="section_4_heading_1_color_3">
+										<p>Advanced</p>
+									</div>
+									<div class="section_4_heading_2">
+										<p>Certification in DevOps</p>
+									</div>
+
+									<div class="section_4_star_rating">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="star_text">3.2</span>
+									</div>
+
+									<div class="section_4_heading_4">
+										<p><span class="fa fa-book"></span>15 Sessions | 22 Hrs</p>
+									</div>
+				
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="card">
+							<div class="blog_card-body">
+								<div class="section_4_all_main_div">
+    		 
+									<div class="clip_path_1"></div>
+									<div class="section_4_image_div4">
+									
+										<div class="section_4_image_div_inner">
+											<img src="{{url('/')}}/public/images/01.png">
+										</div>
+											
+										<div class="section_4_price_div_inner">
+											<p>₹12,000</p>
+										</div>
+												
+										
+									</div>
+
+									<div class="section_4_heading_1">
+										<p>Beginer</p>
+									</div>
+									<div class="section_4_heading_2">
+										<p>Certification in DevOps</p>
+									</div>
+
+									<div class="section_4_star_rating">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="star_text">3.2</span>
+									</div>
+
+									<div class="section_4_heading_4">
+										<p><span class="fa fa-book"></span>15 Sessions | 22 Hrs</p>
+									</div>
+				
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="card">
+							<div class="blog_card-body">
+								<div class="section_4_all_main_div">
+    		 
+									<div class="clip_path_1"></div>
+									<div class="section_4_image_div3">
+									
+										<div class="section_4_image_div_inner">
+											<img src="{{url('/')}}/public/images/01.png">
+										</div>
+											
+										<div class="section_4_price_div_inner">
+											<p>₹12,000</p>
+										</div>
+												
+										
+									</div>
+
+									<div class="section_4_heading_1_color_3">
+										<p>Advanced</p>
+									</div>
+									<div class="section_4_heading_2">
+										<p>Certification in DevOps</p>
+									</div>
+
+									<div class="section_4_star_rating">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="star_text">3.2</span>
+									</div>
+
+									<div class="section_4_heading_4">
+										<p><span class="fa fa-book"></span>15 Sessions | 22 Hrs</p>
+									</div>
+				
+								</div>
+							</div>
+						</div>-->
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>
+			</div>
+    	</div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+   
+    
+    
+    
+    
+    
+  </div>
+<?php $cat=App\category::all();?> 
+@foreach($cat as $cat)
+<?php $cour=App\Course::where('category_id',$cat->id)->get();?>
+  <div id="{{$cat->name}}" class="w3-container w3-border city" style="display:none">
+  
+    <div class="row">
+    	<div class="col-12">
+					    <div class="course_slider_main_div">
+    					<div class="course_slider_main_div_inner">
+					    										
+
+					    					    <?php $i=1;?>
+@foreach($cour as $cour)
+
+						<div class="card">
+							<div class="blog_card-body">
+								<div class="section_4_all_main_div">
+    		 
+									<div class="clip_path_1"></div>
+									<div class="section_4_image_div{{$i}}">
+									
+										<div class="section_4_image_div_inner">
+													<img src="{{url('/')}}/public/uploads/course_images/{{$cour->course_image}}">
+										</div>
+											
+										<div class="section_4_price_div_inner">
+											<p>₹{{$cour->price}}</p>
+										</div>
+												
+										
+									</div>
+
+									<div class="section_4_heading_1">
+										<p>Beginer</p>
+									</div>
+									<div class="section_4_heading_2">
+													<p>{{$cour->title}}</p>		
+									</div>
+
+									<div class="section_4_star_rating">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+										<span class="star_text">3.2</span>
+									</div>
+
+									<div class="section_4_heading_4">
+										<p><span class="fa fa-book"></span>15 Sessions | 22 Hrs</p>
+									</div>
+				
+								</div>
+							</div>
+						</div>
+						<?php $i++;?>
+											  @endforeach 
+</div></div></div></div>
+
+</div>
+ @endforeach
+ 		
+ 	
+ 		
+ 		
+  		</div>
+  		
+  		<div class="popular_courses_btn_div">
+ 			<a href="#">View All</a>
+ 		</div>
+ 		
+ 		
+  	</div>
+  </section> 
+    
+    
+    
+    
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+      
+      
+   
+  <section class="unlock_section_5" >
+  	<div class="container">
+  		<div class="unlock_div" >
+  			<div class="row">
+  				<div class="col-12 col-md-7 col-lg-7">
+  					<div class="unlock_heading_1">
+  						<p>Unlock Your Potential</p>
+  					</div>
+					<div class="unlock_heading_2">
+						<p>Get ready to achieve your goal with LevelUp</p>
+					</div>
+  				</div>
+  				<div class="col-12 col-md-5 col-lg-5">
+  					<div class="section_5_news_letter_div">
+ 						<form action="#" method="post">
+ 							<div class="form-group">
+ 								<input type="email" class="form-control" placeholder="Your Email" name="Your Email" required>
+							</div>
+ 							
+ 							<div class="form-group">
+			              <input type="submit" value="Sign Up" name="sign_up" class="btn news_letter_btn">
+			            </div>
+ 							
+ 						</form> 						
+  					</div>
+  				</div>
+  			</div>
+  			
+  			
+  		</div>
+  	</div>
+  </section>    
+        
+        
+   
+   <section class="section_6" >
+   		<div class="container">
+   			<div class="row" >
+   				<div class="col-12 col-md-4 col-lg-4">
+   					<div class="section_6_div_1" >
+   					
+   						
+   						<div class="section_6_div_1_heading_1">
+   						
+   							<p>Courses <br>Starting <br>Soon</p>
+   						</div>
+   						
+   						<div class="section_6_div_1_description">
+   							<p>Level Up is an online learning destination and  our mission is to deliver high-quality educational content.</p>
+   						</div>
+   					</div>
+   				</div>
+   				
+   				<div class="col-12 col-md-8 col-lg-8">
+   					<div class="section_6_div_2">
+   						<div class="section_6_items">
+   						
+   							
+							<div class="card">
+								<div class="section_6_card-body">
+								
+								
+									<div class="row">
+										<div class="col-6 col-md-6 col-lg-6">
+											<div class="section_6_div_2_inner">
+										
+										<div class="row">
+											<div class="col-3 col-md-3 col-lg-3">
+												<div class="section_6_div_2_image">
+													<img src="{{url('/')}}/public/images/icons_22.png">
+												</div>
+											</div>
+											<div class="col-9 col-md-9 col-lg-9">
+												<div class="section_6_div_2_heading">
+													<p>Email Marketing Advanced</p>
+												</div>
+
+												<div id="demo1"></div>
+											</div>
+										</div>
+
+										
+
+										
+
+									</div>
+										</div>
+										<div class="col-6 col-md-6 col-lg-6">
+											<div class="section_6_div_2_inner">
+										
+										<div class="row">
+											<div class="col-3 col-md-3 col-lg-3">
+												<div class="section_6_div_2_image">
+													<img src="{{url('/')}}/public/images/icons_22.png">
+												</div>
+											</div>
+											<div class="col-9 col-md-9 col-lg-9">
+												<div class="section_6_div_2_heading">
+													<p>Email Marketing Advanced</p>
+												</div>
+
+												<div id="demo2"></div>
+											</div>
+										</div>
+
+										
+
+										
+
+									</div>
+										</div>
+									</div>
+									
+									
+									<div class="row course_section_6_spacing">
+										<div class="col-6 col-md-6 col-lg-6">
+											<div class="section_6_div_2_inner">
+										
+										<div class="row">
+											<div class="col-3 col-md-3 col-lg-3">
+												<div class="section_6_div_2_image">
+													<img src="{{url('/')}}/public/images/icons_22.png">
+												</div>
+											</div>
+											<div class="col-9 col-md-9 col-lg-9">
+												<div class="section_6_div_2_heading">
+													<p>Email Marketing Advanced</p>
+												</div>
+
+												<div id="demo3"></div>
+											</div>
+										</div>
+
+										
+
+										
+
+									</div>
+										</div>
+										<div class="col-6 col-md-6 col-lg-6">
+											<div class="section_6_div_2_inner">
+										
+										<div class="row">
+											<div class="col-3 col-md-3 col-lg-3">
+												<div class="section_6_div_2_image">
+													<img src="{{url('/')}}/public/images/icons_22.png">
+												</div>
+											</div>
+											<div class="col-9 col-md-9 col-lg-9">
+												<div class="section_6_div_2_heading">
+													<p>Email Marketing Advanced</p>
+												</div>
+
+												<div id="demo4"></div>
+											</div>
+										</div>
+
+										
+
+										
+
+									</div>
+										</div>
+									</div>
+									
+									
+									
+									
+								</div>
+							</div>
+							
+							
+							
+							<div class="card">
+								<div class="section_6_card-body">
+								
+								
+									<div class="row">
+										<div class="col-6 col-md-6 col-lg-6">
+											<div class="section_6_div_2_inner">
+										
+										<div class="row">
+											<div class="col-3 col-md-3 col-lg-3">
+												<div class="section_6_div_2_image">
+													<img src="{{url('/')}}/public/images/icons_22.png">
+												</div>
+											</div>
+											<div class="col-9 col-md-9 col-lg-9">
+												<div class="section_6_div_2_heading">
+													<p>Email Marketing Advanced</p>
+												</div>
+
+												<div id="demo5"></div>
+											</div>
+										</div>
+
+										
+
+										
+
+									</div>
+										</div>
+										<div class="col-6 col-md-6 col-lg-6">
+											<div class="section_6_div_2_inner">
+										
+										<div class="row">
+											<div class="col-3 col-md-3 col-lg-3">
+												<div class="section_6_div_2_image">
+													<img src="{{url('/')}}/public/images/icons_22.png">
+												</div>
+											</div>
+											<div class="col-9 col-md-9 col-lg-9">
+												<div class="section_6_div_2_heading">
+													<p>Email Marketing Advanced</p>
+												</div>
+
+												<div id="demo6"></div>
+											</div>
+										</div>
+
+										
+
+										
+
+									</div>
+										</div>
+									</div>
+									
+									
+									<div class="row course_section_6_spacing">
+										<div class="col-6 col-md-6 col-lg-6">
+											<div class="section_6_div_2_inner">
+										
+										<div class="row">
+											<div class="col-3 col-md-3 col-lg-3">
+												<div class="section_6_div_2_image">
+													<img src="{{url('/')}}/public/images/icons_22.png">
+												</div>
+											</div>
+											<div class="col-9 col-md-9 col-lg-9">
+												<div class="section_6_div_2_heading">
+													<p>Email Marketing Advanced</p>
+												</div>
+
+												<div id="demo7"></div>
+											</div>
+										</div>
+
+										
+
+										
+
+									</div>
+										</div>
+										<div class="col-6 col-md-6 col-lg-6">
+											<div class="section_6_div_2_inner">
+										
+										<div class="row">
+											<div class="col-3 col-md-3 col-lg-3">
+												<div class="section_6_div_2_image">
+													<img src="{{url('/')}}/public/images/icons_22.png">
+												</div>
+											</div>
+											<div class="col-9 col-md-9 col-lg-9">
+												<div class="section_6_div_2_heading">
+													<p>Email Marketing Advanced</p>
+												</div>
+
+												<div id="demo8"></div>
+											</div>
+										</div>
+
+										
+
+										
+
+									</div>
+										</div>
+									</div>
+									
+									
+									
+									
+								</div>
+							</div>
+							
+							
+							
+							
+							
+							
+							
+						</div>
+   					
+   					
+   						
+   					</div>
+   				</div>
+   				
+   			</div>
+   		</div>
+   </section>     
+        
+        
+   <section class="section_7">
+   	<div class="container">
+   		<div class="section_7_main_heading_1">
+  			<p>Trending <span>Categories</span></p>
+  		</div>
+  		
+  		<div class="section_7_main_heading_2">
+  			<p>Level Up is an online learning destination and  our mission is to deliver high-quality educational content.</p>
+  		</div>
+  		
+  		<div class="section_7_row_div_main">
+  			<div class="row">
+  			      			    @foreach($category as $category)  
+
+  				<div class="col-12 col-md-2 col-lg-2">
+  					<div class="section_7_category_main_div">
+  						<div class="section_7_category_image_div1">
+  							<img src="{{url('/')}}/public/uploads/images/{{$category->icon}}">
+  						</div>
+  						
+  						
+  						<div class="section_7_category_heading_div">
+  							<p>{{$category->name}}</p>
+  						</div>
+  						
+  						
+  					</div>
+  				</div>
+  				@endforeach
+  				
+  			<!--	<div class="col-12 col-md-2 col-lg-2">
+  					<div class="section_7_category_main_div">
+  						<div class="section_7_category_image_div2">
+  							<img src="{{url('/')}}/public/images/data science.png">
+  						</div>
+  						
+  						
+  						<div class="section_7_category_heading_div">
+  							<p>Data Science</p>
+  						</div>
+  						
+  						
+  					</div>
+  				</div>
+  				<div class="col-12 col-md-2 col-lg-2">
+  					<div class="section_7_category_main_div">
+  						<div class="section_7_category_image_div3">
+  							<img src="{{url('/')}}/public/images/devlpmnt.png">
+  						</div>
+  						
+  						
+  						<div class="section_7_category_heading_div">
+  							<p>	Development</p>
+  						</div>
+  						
+  						
+  					</div>
+  				</div>
+  				<div class="col-12 col-md-2 col-lg-2">
+  					<div class="section_7_category_main_div">
+  						<div class="section_7_category_image_div4">
+  							<img src="{{url('/')}}/public/images/finance.png">
+  						</div>
+  						
+  						
+  						<div class="section_7_category_heading_div">
+  							<p>Finance</p>
+  						</div>
+  						
+  						
+  					</div>
+  				</div>
+  				<div class="col-12 col-md-2 col-lg-2">
+  					<div class="section_7_category_main_div">
+  						<div class="section_7_category_image_div5">
+  							<img src="{{url('/')}}/public/images/marketing.png">
+  						</div>
+  						
+  						
+  						<div class="section_7_category_heading_div">
+  							<p>Marketing</p>
+  						</div>
+  						
+  						
+  					</div>
+  				</div>
+  				<div class="col-12 col-md-2 col-lg-2">
+  					<div class="section_7_category_main_div">
+  						<div class="section_7_category_image_div6">
+  							<img src="{{url('/')}}/public/images/art  design.png">
+  						</div>
+  						
+  						
+  						<div class="section_7_category_heading_div">
+  							<p>Art & Design</p>
+  						</div>
+  						
+  						
+  					</div>
+  				</div>-->
+  			</div>
+  		</div>
+   	</div>
+   </section>
+           
+         
+   <section class="section_8">
+   		<div class="container">
+   			<div class="row">
+   				<div class="col-12 col-md-7 col-lg-7">
+   					<div class="section_8_left_div">
+   						<div class="section_8_left_div_heading_1">
+   							<p>Level Up for Corporate Trainings</p>
+   						</div>
+   						
+   						<div class="row">
+   							<div class="col-12 col-md-7 col-lg-7">
+   								<div class="section_8_left_div_heading_2">
+									<p>Make your employees into masters. Nurture talent with instructor-led courses on trending technologies</p>
+								</div>							
+   							</div>
+   							<div class="col-12 col-md-5 col-lg-5">
+   								
+   							</div>
+   						</div>
+   						
+   						
+   						<div class="section_8_left_div_btn">
+   							<a href="#">Learn More</a>
+   						</div>
+   					</div>
+   				</div>
+   				
+   				<div class="col-12 col-md-5 col-lg-5">
+   					<div class="section_8_right_div">
+   						<div class="section_8_right_div_heading_1">
+   							<p>Become an</p>
+   						</div>		
+   						<div class="section_8_right_div_heading_2">
+   							<p>Instructor</p>
+   						</div>		
+   						<div class="section_8_right_div_btn">
+   							<a href="#">Join Our Team</a>
+   						</div>		
+   					</div>
+   				</div>
+   					
+   			</div>
+   		</div>
+   </section>        
+                       
+       
+    <section class="counter_section">
+    	<div class="container">
+    		
+    		
+    		<div class="row">
+    			<div class="col-12 col-md-6 col-lg-6">
+    				<div class="counter_section_left_div">
+    					<div class="counter_section_left_div_heading_1">
+    						<p>Learn something new </p>
+    					</div>
+    					
+    					<div class="counter_section_left_div_heading_2">
+    						<p>Level Up is an online learning destination and  our mission is to deliver high-quality educational content.Level Up is an online learning destination and  our mission is </p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-12 col-md-1 col-lg-1"></div>
+    			<div class="col-12 col-md-5 col-lg-5">
+    				
+    				<div class="counter_section_right_div">
+    					<div class="row">
+    					        		 @foreach($counters as $count) 
+
+    					    
+    						<div class="col-12 col-md-6 col-lg-6">
+    							<div class="counter_main_div">
+									<div class="counter_iamge_div">
+    						<img src="{{url('/')}}/public/uploads/images/{{$count->images}}">
+									</div>
+
+									<div class="counter_number_div">
+    				            @if($count->countt)	<span class="Count">
+    				    	{{$count->countt}}</span><p class="counter_suffix">+</p>	@endif
+									</div>
+
+									<div class="counter_heading_div">
+    						<p>{{$count->name}}</p>
+									</div>
+								</div>
+    						</div>
+    					
+    					@endforeach	
+    						
+    					</div>
+    					
+    					<div class="row counter_spacing_row">
+    					    <?php 
+    					            $count = App\Counter::orderBy('id','DESC')->limit(2)->get();
+
+    					    ?>
+    					        					        		 @foreach($count as $count1) 
+
+    						<div class="col-12 col-md-6 col-lg-6">
+    							<div class="counter_main_div">
+									<div class="counter_iamge_div">
+    						<img src="{{url('/')}}/public/uploads/images/{{$count1->images}}">
+									</div>
+
+									<div class="counter_number_div">
+    				@if($count1->countt)	<span class="Count">	{{$count1->countt}}</span><p class="counter_suffix">+</p>	@endif
+									</div>
+
+									<div class="counter_heading_div">
+    						<p>{{$count1->name}}</p>
+									</div>
+								</div>
+    						</div>
+    				@endforeach
+    						
+    						
+    					</div>
+    				</div>
+    				
+    			</div>
+    		</div>
+    	
+    	
+    		
+    	</div>
+    </section>                                    
+                                                              
+                                                                                                          
+   <section class="section_9">
+   		<div class="container">
+   			<div class="section_9_main_heading_1">
+  			<p>Our Student have been <span>placed</span></p>
+			</div>
+
+			<div class="section_9_main_heading_2">
+				<p>{{$studplaced->short_desc}}</p>
+			</div>
+  		  				<?php $placed=App\Studentplaced_images::where('studentplaced_id',$studplaced->id)->get();?>
+               
+  					      			<div class="section_9_logo_main_div">
+		
+  					@foreach($placed as $placed)	
+  					<div class="section_9_logo_inner_div">
+  										<img src="{{url('/')}}/public/uploads/images/{{$placed->imagess}}">
+					</div>
+ 			
+ 						@endforeach
+  					
+  				</div>
+  				
+  				
+  			
+  				
+  				
+  			</div>
+   		
+   </section>
+              
+              
+   <section class="section_10">
+   		<div class="container">
+   			<div class="section_10_main_heading_1">
+  			<p>Our <span>Partners</span></p>
+			</div>
+
+			<div class="partner_logo_div_main">
+									@foreach($patners as $patner)
+
+				<div class="partner_logo_div">
+							<img src="{{url('/')}}/public/uploads/images/{{$patner->image}}">
+				</div>
+									@endforeach
+
+			
+			</div>
+				
+					
+				
+			
+   		</div>
+   </section>
+              
+              
+    <section class="testimonial_section">
+    	<div class="container">
+    			
+    			<div class="testimonial_section_main_div">
+    			
+    				<div class="testimonial_left_div">
+    					<div class="testimonial_left_heading_1">
+							<p>See What Our Students <br>Have To<span> Say</span></p>
+    					</div>
+    					<div class="testimonial_left_heading_2">
+    						<p>Level Up is an online learning destination and  our mission is to deliver high-quality educational content.</p>
+    					</div>
+    				</div>
+
+    			
+    			
+    			
+    				<div class="testimonial_right_div">
+    					<div class="testimonial_main_div">
+					<div class="stories_items">
+					    					    @foreach($testimonial as $test)
+
+						<div class="card">
+							<div class="blog_card-body">
+								<div class="testimonial_card_main_div">
+									<div class="testimonial_quotes">
+										<i class="fa fa-quote-left"></i>
+									</div>
+									<div class="testimonial_description">
+										<p>{{$test->long_desc}}</p>
+									</div>
+									
+									<div class="testimonial_name">
+										<p>{{$test->name}}, <span>{{$test->short_desc}}</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+   				
+   				   				@endforeach
+
+   					
+   				
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+			
+		</div>
+    </section>          
+
+      @endsection
+             <!-- Back to top button -->
+  

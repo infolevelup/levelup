@@ -1,0 +1,557 @@
+ @extends('layouts.app')
+ 
+ @section('content')  
+ 
+ 
+ 
+  
+        <section class="breadcrumb_section">
+	<div class="container">
+		<div class="breadcrumb_section_div">
+			<h2>Courses</h2>
+			<p>Home / Courses</p>
+		</div>
+	</div>
+</section>  
+           
+  
+ <div class="courses_section_1">
+ 	<div class="container">
+ 	<!-- Navbar section -->
+
+<div class="filter"> <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#mobile-filter" aria-expanded="true" aria-controls="mobile-filter">Filters<span class="fa fa-filter pl-1"></span></button>
+</div>
+<div id="mobile-filter">    
+    <div class="border-bottom pb-2 ml-2">
+        <h4 id="burgundy">Filters</h4>
+    </div>
+    <div class="py-2 border-bottom ml-3">
+        <h6 class="font-weight-bold">Main Categories</h6>
+        <div id="orange"><span class="fa fa-minus"></span></div>
+        <form>
+            <div class="form-group"> <input type="checkbox" id="category_1"> <label for="category_1">Category 1</label> </div>
+            <div class="form-group"> <input type="checkbox" id="category_2"> <label for="category_2">Category 2</label> </div>
+            <div class="form-group"> <input type="checkbox" id="category_3"> <label for="category_3">Category 3</label> </div>
+        </form>
+    </div>
+    <!--<div class="py-2 border-bottom ml-3">
+        <h6 class="font-weight-bold">Sub Categories</h6>
+        <div id="orange"><span class="fa fa-minus"></span></div>
+        <form>
+            <div class="form-group"> <input type="checkbox" id="sub_category_1"> <label for="sub_category_1">Sub Category 1</label> </div>
+            <div class="form-group"> <input type="checkbox" id="sub_category_2"> <label for="sub_category_2">Sub Category 2</label> </div>
+            <div class="form-group"> <input type="checkbox" id="sub_category_3"> <label for="sub_category_3">Sub Category 3</label> </div>
+            <div class="form-group"> <input type="checkbox" id="sub_category_4"> <label for="sub_category_4">Sub Category 4</label> </div>
+            <div class="form-group"> <input type="checkbox" id="sub_category_5"> <label for="sub_category_5">Sub Category 5</label> </div>
+        </form>
+    </div>-->
+    
+    <div class="py-2 ml-3">
+        <h6 class="font-weight-bold">Top Offers</h6>
+        <div id="orange"><span class="fa fa-minus"></span></div>
+        <form>
+            <div class="form-group"> <input type="checkbox" id="25off"> <label for="25">25% off</label> </div>
+            <div class="form-group"> <input type="checkbox" id="5off"> <label for="5off" id="off">5% off</label> </div>
+        </form>
+    </div>
+</div> <?php 
+                    $category=App\Category::where('status',1)->get();
+                    
+                    ?>
+<!-- Sidebar filter section -->
+	<section id="sidebar">    
+    <div class="border-bottom pb-2 ml-2">
+        <h4 id="burgundy">Filters</h4>
+    </div>
+     <div class="py-2 border-bottom ml-3">
+        <h6 class="font-weight-bold"  id="catFilters">Main Categories</h6>
+        <div id="orange"><span class="fa fa-minus"></span></div>
+        
+            
+                   
+                    <?php $counter=0; ?>
+                                @if(!empty($category))
+                                @foreach ($category as $category)
+                                <div class="form-group">
+                                    <input type="checkbox" {{($counter == 0 ? 'checked' : '')}}
+                                        attr-name="{{$category->name}}"
+                                        class="category_checkbox" id="{{$category->id}}">
+                                    <label 
+                                        for="{{$category->id}}">{{ucfirst($category->name)}}</label>
+                                </div>
+                                <?php $counter++; ?>
+                                @endforeach
+                                @endif
+        <div class="row m-0 causes_div">
+
+                        </div>
+    </div>
+  <!--  <div class="py-2 border-bottom ml-3">
+        <h6 class="font-weight-bold">Sub Categories</h6>
+        <div id="orange"><span class="fa fa-minus"></span></div>
+        <form>
+            <div class="form-group"> <input type="checkbox" id="sub_category_1"> <label for="sub_category_1">Sub Category 1</label> </div>
+            <div class="form-group"> <input type="checkbox" id="sub_category_2"> <label for="sub_category_2">Sub Category 2</label> </div>
+            <div class="form-group"> <input type="checkbox" id="sub_category_3"> <label for="sub_category_3">Sub Category 3</label> </div>
+            <div class="form-group"> <input type="checkbox" id="sub_category_4"> <label for="sub_category_4">Sub Category 4</label> </div>
+            <div class="form-group"> <input type="checkbox" id="sub_category_5"> <label for="sub_category_5">Sub Category 5</label> </div>
+        </form>
+    </div>-->
+    <div class="py-2 ml-3">
+        <h6 class="font-weight-bold">Top Offers</h6>
+        <div id="orange"><span class="fa fa-minus"></span></div>
+        <form>
+            <div class="form-group"> <input type="checkbox" id="25off"> <label for="25">25% off</label> </div>
+            <div class="form-group"> <input type="checkbox" id="5off"> <label for="5off" id="off">5% off</label> </div>
+        </form>
+    </div>
+</section>
+<!-- products section -->
+	<section id="products">
+    <div class="container">
+        <div class="d-flex flex-row">
+            <div class="text-muted m-2" id="res">Showing  @if($courses->count() > 0) {{$courses->count()}} @endif results</div>
+            <div class="ml-auto ">
+                <div id="sorting" class="border rounded p-1 m-1"> <span class="text-muted">Sort by</span> <select name="sort" id="sortBy">
+                       <option value="">None</option>
+                                <option value="popular">Popular</option>
+                                <option value="trending">Trending</option>
+                                <option value="featured">Featured</option>
+                    </select> </div>
+            </div>
+        </div>
+        <div class="row">
+           
+           
+             @if($courses->count() > 0)
+
+                                            @foreach($courses as $course)
+           	<div class="col-12 col-md-4 col-lg-4">
+           		<div class="course_blog_card-body">
+				<div class="course_section_4_all_main_div">
+				<div class="section_4_image_div1">
+					<div class="section_4_image_div_inner">
+						<a href="{{url('/')}}/course/{{$course->slug}}"><img src="{{url('/')}}/public/uploads/course_images/{{$course->course_image}}"></a>
+					</div>
+					<div class="section_4_price_div_inner">
+						<p>₹ {{$course->price}}</p>
+					</div>
+				</div>
+				<div class="course_section_4_heading_1">
+					<p><a href="{{url('/')}}/course/{{$course->slug}}">{{$course->title}}</a></p>
+				</div>
+				<div class="course_section_4_star_rating">
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="star_text">5.0 (300 Rating)</span>
+				</div>
+				<div class="course_section_4_heading_2">
+					<p>{!! Str::limit($course->description, 100) !!} 
+
+
+</p>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-lg-6">
+						<div class="course_section_4_heading_4">
+							<p><span class="fa fa-book"></span>10 Lessons</p>
+						</div>
+						
+						<div class="course_section_4_heading_5">
+							<p><span class="fa fa-sticky-note-o"></span>8 Lectures</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6">
+						<div class="course_section_4_heading_6">
+							<p><span class="fa fa-calendar"></span>20Hr</p>
+						</div>
+						
+						<div class="course_section_4_heading_7">
+							<p><span class="fa fa-clock-o "></span>8Hr/ Week</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+           	</div>
+        
+           	
+           	@endforeach
+           	@else
+           	
+           <p>No data found</p>
+           	@endif
+           	
+           	
+           	
+           	
+           	
+           	
+           	
+           	
+           	
+           	
+        
+        </div>
+        
+{{ $courses->links() }}
+    </div>
+</section>
+ </div>   
+                   
+  </div>                  
+                     
+                      
+                       
+                        
+              
+
+                                                                                                      
+   <section class="section_9 section_9_margin_css">
+   		<div class="container">
+   			<div class="section_9_main_heading_1">
+  			<p>Our Student have been <span>placed</span></p>
+			</div>
+
+			<div class="section_9_main_heading_2">
+				<p>Level Up is an online learning destination and  our mission is to deliver high-quality educational content.</p>
+			</div>
+  		
+  			<div class="section_9_logo_main_div">
+  					
+  					<div class="section_9_logo_inner_div">
+  						<img src="{{url('/')}}/public/images/client_sony.png">
+					</div>
+ 					
+ 					<div class="section_9_logo_inner_div">
+  						<img src="{{url('/')}}/public/images/client_canon.png">
+					</div>
+ 					
+ 					<div class="section_9_logo_inner_div">
+  						<img src="{{url('/')}}/public/images/client_ikea.png">
+					</div>
+ 					
+ 					<div class="section_9_logo_inner_div">
+  						<img src="{{url('/')}}/public/images/client_amazon.png">
+					</div>
+ 					
+ 					<div class="section_9_logo_inner_div">
+  						<img src="{{url('/')}}/public/images/client_nbc.png">
+					</div>
+ 					
+ 					
+  					
+  					
+  				</div>
+  				
+  				
+  				<div class="section_9_logo_main_div2">
+  					
+  					<div class="section_9_logo_inner_div">
+  						<img src="{{url('/')}}/public/images/disney.png">
+					</div>
+ 					
+ 					<div class="section_9_logo_inner_div">
+  						<img src="{{url('/')}}/public/images/client_ford.png">
+					</div>
+ 					
+ 					<div class="section_9_logo_inner_div">
+  						<img src="{{url('/')}}/public/images/client_visa.png">
+					</div>
+ 					
+ 					<div class="section_9_logo_inner_div">
+  						<img src="{{url('/')}}/public/images/client_kellogies.png">
+					</div>
+ 					
+ 					<div class="section_9_logo_inner_div">
+  						<img src="{{url('/')}}/public/images/client_google.png">
+					</div>
+ 					
+ 					
+  					
+  					
+  				</div>
+  				
+  				
+  			</div>
+   		
+   </section>
+              
+              
+   <section class="section_10">
+   		<div class="container">
+   			<div class="section_10_main_heading_1">
+  			<p>Our <span>Partners</span></p>
+			</div>
+
+			<div class="partner_logo_div_main">
+			
+				<div class="partner_logo_div">
+					<img src="{{url('/')}}/public/images/partners_logo_1.png">
+				</div>
+				
+				<div class="partner_logo_div">
+					<img src="{{url('/')}}/public/images/partners_logo_2.png">
+				</div>
+				
+				<div class="partner_logo_div">
+					<img src="{{url('/')}}/public/images/partners_logo_3.png">
+				</div>
+				
+				
+				<div class="partner_logo_div">
+					<img src="{{url('/')}}/public/images/partners_logo_4.png">
+				</div>
+				
+				
+				<div class="partner_logo_div">
+					<img src="{{url('/')}}/public/images/partners_logo_5.png">
+				</div>
+				
+			</div>
+				
+					
+				
+			
+   		</div>
+   </section>
+              
+              
+    <section class="testimonial_section">
+    	<div class="container">
+    			
+    			<div class="testimonial_section_main_div">
+    			
+    				<div class="testimonial_left_div">
+    					<div class="testimonial_left_heading_1">
+							<p>See What Our Students <br>Have To<span> Say</span></p>
+    					</div>
+    					<div class="testimonial_left_heading_2">
+    						<p>Level Up is an online learning destination and  our mission is to deliver high-quality educational content.</p>
+    					</div>
+    				</div>
+
+    			
+    			
+    			
+    				<div class="testimonial_right_div">
+    					<div class="testimonial_main_div">
+					<div class="stories_items">
+						<div class="card">
+							<div class="blog_card-body">
+								<div class="testimonial_card_main_div">
+									<div class="testimonial_quotes">
+										<i class="fa fa-quote-left"></i>
+									</div>
+									<div class="testimonial_description">
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has beenprinting and typesetting industry lorem Ipsum has been Lorem Ipsum has beenprinting and typesetting industry lorem Ipsum has...</p>
+									</div>
+									
+									<div class="testimonial_name">
+										<p>Name, <span>Location</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+   				
+   				
+   						<div class="card">
+							<div class="blog_card-body">
+								<div class="testimonial_card_main_div">
+									<div class="testimonial_quotes">
+										<i class="fa fa-quote-left"></i>
+									</div>
+									<div class="testimonial_description">
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has beenprinting and typesetting industry lorem Ipsum has been Lorem Ipsum has beenprinting and typesetting industry lorem Ipsum has...</p>
+									</div>
+									
+									<div class="testimonial_name">
+										<p>Name, <span>Location</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="card">
+							<div class="blog_card-body">
+								<div class="testimonial_card_main_div">
+									<div class="testimonial_quotes">
+										<i class="fa fa-quote-left"></i>
+									</div>
+									<div class="testimonial_description">
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has beenprinting and typesetting industry lorem Ipsum has been Lorem Ipsum has beenprinting and typesetting industry lorem Ipsum has...</p>
+									</div>
+									
+									<div class="testimonial_name">
+										<p>Name, <span>Location</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="card">
+							<div class="blog_card-body">
+								<div class="testimonial_card_main_div">
+									<div class="testimonial_quotes">
+										<i class="fa fa-quote-left"></i>
+									</div>
+									<div class="testimonial_description">
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has beenprinting and typesetting industry lorem Ipsum has been Lorem Ipsum has beenprinting and typesetting industry lorem Ipsum has...</p>
+									</div>
+									
+									<div class="testimonial_name">
+										<p>Name, <span>Location</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="card">
+							<div class="blog_card-body">
+								<div class="testimonial_card_main_div">
+									<div class="testimonial_quotes">
+										<i class="fa fa-quote-left"></i>
+									</div>
+									<div class="testimonial_description">
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has beenprinting and typesetting industry lorem Ipsum has been Lorem Ipsum has beenprinting and typesetting industry lorem Ipsum has...</p>
+									</div>
+									
+									<div class="testimonial_name">
+										<p>Name, <span>Location</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="card">
+							<div class="blog_card-body">
+								<div class="testimonial_card_main_div">
+									<div class="testimonial_quotes">
+										<i class="fa fa-quote-left"></i>
+									</div>
+									<div class="testimonial_description">
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has beenprinting and typesetting industry lorem Ipsum has been Lorem Ipsum has beenprinting and typesetting industry lorem Ipsum has...</p>
+									</div>
+									
+									<div class="testimonial_name">
+										<p>Name, <span>Location</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+   				
+   				
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+			
+		</div>
+    </section>          
+
+ 
+ 
+  
+ 
+ 
+ 
+ 
+
+ 
+ @endsection
+@push('after-scripts')
+    <script>
+        $(document).ready(function () {
+            $(document).on('change', '#sortBy', function () {
+                if ($(this).val() != "") {
+                    location.href = '{{url()->current()}}?type=' + $(this).val();
+                } else {
+                    location.href = '{{route('course.courseindex')}}';
+                }
+            })
+
+            @if(request('type') != "")
+            $('#sortBy').find('option[value="' + "{{request('type')}}" + '"]').attr('selected', true);
+            @endif
+        });
+
+$(document).ready(function() {
+  
+ $(document).on('click', '.category_checkbox', function () {
+     
+     
+     
+     var ids = [];
+
+        var counter = 0;
+       $('#catFilters').empty();
+        $('.category_checkbox').each(function () {
+            if ($(this).is(":checked")) {
+                ids.push($(this).attr('id'));
+                $('#catFilters').append(`<div class="alert fade show alert-color _add-secon" role="alert"> 
+                ${$(this).attr('attr-name')}<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> </div>`);
+                counter++;
+            }
+        });
+
+        $('._t-item').text('(' + ids.length + ' items)');
+
+        if (counter == 0) {
+            $('.causes_div').empty();
+            $('.causes_div').append('No Data Found');
+        } else {
+            fetchCauseAgainstCategory(ids);
+            
+        }
+
+
+    });
+});
+
+
+function fetchCauseAgainstCategory(id) {
+//alert(id);
+    $('.causes_div').empty();
+        if (id!= "") {
+                    location.href = '{{url()->current()}}?typee=' + id;
+                } else {
+                    location.href = '{{route('course.courseindex')}}';
+                }
+  @if(request('typee') != "")
+            $('.category_checkbox').find('option[value="' + "{{request('type')}}" + '"]').attr('selected', true);
+            @endif
+   /* $.ajax({
+        type: 'GET',
+        url: '{{url('/')}}/get_causes_against_category/' + id,
+        success: function (response) {
+            var response = JSON.parse(response);
+            console.log(response);
+            
+            if (response.length == 0) {
+                $('.causes_div').append('No Data Found');
+            } else {
+                response.forEach(element => {
+                    $('.causes_div').append(`<div href="#" class="col-lg-4 col-md-6 col-sm-6 col-xs-12 r_Causes IMGsize">
+                      
+                          
+                            <h3>${element.title}</h3>
+                      
+                    </div>`);
+                });
+            }
+        }
+    });
+    */
+}
+    </script>
+@endpush
